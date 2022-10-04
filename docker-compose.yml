@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    command: yarn dev -- -L
+    image: node-app
+    environment:
+      - MONGODB_URL=mongodb://mongodb:27017/node-app
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mongodb
+    volumes:
+      - .:/usr/dist/node-app
+    networks:
+      - node-app-network
+
+  mongodb:
+    image: mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - dbdata:/data/db
+    networks:
+      - node-app-network
+
+volumes:
+  dbdata:
+
+networks:
+  node-app-network:
+    driver: bridge
