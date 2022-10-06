@@ -8,9 +8,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+// @ts-ignore
+const ListService = require('../services/listService');
 exports.listTODO = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        res.json('TEST listTODO');
+        res.json(yield ListService.getTODO(req));
     }
     catch (error) {
         next(error);
@@ -18,7 +20,7 @@ exports.listTODO = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
 });
 exports.addTODO = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        res.json('TEST addTODO');
+        res.json(yield ListService.saveNewTODO(req));
     }
     catch (error) {
         next(error);
@@ -26,7 +28,8 @@ exports.addTODO = (req, res, next) => __awaiter(void 0, void 0, void 0, function
 });
 exports.removeTODO = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        res.json('TEST removeTODO');
+        yield ListService.deleteTODO(req);
+        res.json('Success!');
     }
     catch (error) {
         next(error);
@@ -34,7 +37,8 @@ exports.removeTODO = (req, res, next) => __awaiter(void 0, void 0, void 0, funct
 });
 exports.shareTODO = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        res.json('TEST shareTODO');
+        yield ListService.shareUserTODO(req);
+        res.json(yield ListService.getTODO(req));
     }
     catch (error) {
         next(error);

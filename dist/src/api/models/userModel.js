@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.userModel = void 0;
+exports.User = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 /**
  * Refresh Token Schema
@@ -29,4 +29,4 @@ userSchema.pre('save', (next) => {
     // this.updated_at = Date.now();
     return next();
 });
-exports.userModel = mongoose_1.default.model('Item', userSchema);
+exports.User = mongoose_1.default.model('User', userSchema);

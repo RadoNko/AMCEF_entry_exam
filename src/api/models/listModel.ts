@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
-import {User} from './userModel';
+import {Item} from './itemModel';
+
 /**
  * Refresh Token Schema
  * @private
@@ -10,8 +11,12 @@ const listSchema = new mongoose.Schema({
 		index: true,
 		required: true,
 	},
+	// TODO :
+	items: [{
+		type: Item.schema
+	}],
 	allowedUsers: {
-		type: [User.schema]
+		type: [String]
 	},
 });
 

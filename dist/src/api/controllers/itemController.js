@@ -8,9 +8,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+Object.defineProperty(exports, "__esModule", { value: true });
+const ItemService = require('../services/itemService');
+// @ts-ignore
+const ListService = require('../services/listService');
 exports.addItem = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        res.json('TEST addItem');
+        yield ItemService.createNewItem(req);
+        res.json(yield ListService.getTODO(req));
     }
     catch (error) {
         next(error);
@@ -18,7 +23,8 @@ exports.addItem = (req, res, next) => __awaiter(void 0, void 0, void 0, function
 });
 exports.flagItem = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        res.json('TEST flagItem');
+        yield ItemService.updateItem(req);
+        res.json(yield ListService.getTODO(req));
     }
     catch (error) {
         next(error);

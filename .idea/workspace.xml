@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92ad945d-4676-4ce3-b944-f8b837b6b34f" name="Changes" comment="" />
+    <list default="true" id="92ad945d-4676-4ce3-b944-f8b837b6b34f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/api/controllers/itemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/controllers/itemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/api/controllers/listController.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/controllers/listController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/api/models/itemModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/models/itemModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/api/models/listModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/models/listModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/api/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/models/userModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/api/routes/itemRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/routes/itemRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/api/routes/listRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/routes/listRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/config/mongoose.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/config/mongoose.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controllers/itemController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controllers/itemController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controllers/listController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controllers/listController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/models/itemModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/models/itemModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/models/listModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/models/listModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/routes/itemRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/itemRoute.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/routes/listRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/listRoute.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/mongoose.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/mongoose.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,11 +39,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Fd4pCle7NVuTeJ8c6eHvSHV1d4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664808807637</updated>
-      <workItem from="1664808809236" duration="9288000" />
+      <workItem from="1664808809236" duration="26203000" />
     </task>
     <servers />
   </component>

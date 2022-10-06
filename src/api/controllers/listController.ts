@@ -1,27 +1,32 @@
+// @ts-ignore
+const ListService = require('../services/listService');
+
 exports.listTODO = async (req, res, next) => {
 	try {
-		res.json('TEST listTODO');
+		res.json(await ListService.getTODO(req));
 	} catch (error) {
 		next(error);
 	}
 };
 exports.addTODO = async (req, res, next) => {
 	try {
-		res.json('TEST addTODO');
+		res.json(await ListService.saveNewTODO(req));
 	} catch (error) {
 		next(error);
 	}
 };
 exports.removeTODO = async (req, res, next) => {
 	try {
-		res.json('TEST removeTODO');
+		await ListService.deleteTODO(req);
+		res.json('Success!');
 	} catch (error) {
 		next(error);
 	}
 };
 exports.shareTODO = async (req, res, next) => {
 	try {
-		res.json('TEST shareTODO');
+		await ListService.shareUserTODO(req)
+		res.json(await ListService.getTODO(req));
 	} catch (error) {
 		next(error);
 	}

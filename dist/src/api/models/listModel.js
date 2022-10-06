@@ -3,9 +3,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.listModel = void 0;
+exports.List = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
-const userModel_1 = require("./userModel");
+const itemModel_1 = require("./itemModel");
 /**
  * Refresh Token Schema
  * @private
@@ -16,8 +16,12 @@ const listSchema = new mongoose_1.default.Schema({
         index: true,
         required: true,
     },
+    // TODO :
+    items: [{
+            type: itemModel_1.Item.schema
+        }],
     allowedUsers: {
-        type: [userModel_1.userModel.schema]
+        type: [String]
     },
 });
 /*
@@ -27,4 +31,4 @@ listSchema.pre('save', (next) => {
     // this.updated_at = Date.now();
     return next();
 });
-exports.listModel = mongoose_1.default.model('Item', listSchema);
+exports.List = mongoose_1.default.model('List', listSchema);
