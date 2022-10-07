@@ -12,7 +12,4 @@ const router = express_1.default.Router();
 router
     .route('/auth/register')
     .post(controller.register);
-router
-    .route('/auth/login')
-    .post(controller.login);
 exports.authRoute = router;

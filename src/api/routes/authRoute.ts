@@ -10,8 +10,4 @@ router
 	.route('/auth/register')
 	.post(controller.register);
 
-router
-	.route('/auth/login')
-	.post(controller.login);
-
 export const authRoute	 = router;

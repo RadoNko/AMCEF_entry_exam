@@ -1,6 +1,7 @@
+import * as UserService from '../services/userService';
 exports.register = async (req, res, next) => {
 	try {
-		res.json('TEST register');
+		await UserService.register(req,res)
 	} catch (error) {
 		next(error);
 	}

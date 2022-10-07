@@ -1,17 +1,15 @@
 import {List} from '../models/listModel';
-import {User} from '../models/userModel';
+import * as UserService from '../services/userService';
 
 export async function saveNewTODO(req){
 	try{
-		// TODO:get current user
-		const user = await User.findOneAndUpdate(
-			{username: 'test'},
-			{username: 'test',password: 'test'},
-			{ upsert: true });
-		//------------------
+		const username = await UserService.getUsername(req);
+		if(req.body.name.trim().length < 3){
+			return 'TODO List name needs to be atleast 3 characters long...'
+		}
 		await List.findOneAndUpdate(
 			{name : req.body.name},
-			{name : req.body.name, allowedUsers : [user!.username]},
+			{name : req.body.name, allowedUsers : [username]},
 			{ upsert: true });
 		return 'Success!';
 	}catch (e) {
@@ -30,9 +28,7 @@ export async function deleteTODO(req){
 }
 
 export async function shareUserTODO(req) {
-	// TODO:get current user
-	const username = 'test';
-	// ----------------
+	const username = await UserService.getUsername(req);
 
 	return List.findOneAndUpdate(
 		{name: req.body.name, allowedUsers: username},

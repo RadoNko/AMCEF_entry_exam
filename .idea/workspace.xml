@@ -4,24 +4,28 @@
     <list default="true" id="92ad945d-4676-4ce3-b944-f8b837b6b34f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/api/controllers/itemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/controllers/itemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/api/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/controllers/authController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/src/api/controllers/listController.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/controllers/listController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/api/models/itemModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/models/itemModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/api/models/listModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/models/listModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/src/api/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/models/userModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/api/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/routes/authRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/src/api/routes/itemRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/routes/itemRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/src/api/routes/listRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/routes/listRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/config/mongoose.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/config/mongoose.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/api/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/services/authService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/api/services/itemService.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/services/itemService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/api/services/listService.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/api/services/listService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/controllers/itemController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controllers/itemController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controllers/authController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controllers/authController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/controllers/listController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controllers/listController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/models/itemModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/models/itemModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/models/listModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/models/listModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/models/userModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/models/userModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/routes/authRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/authRoute.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/routes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/routes/itemRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/itemRoute.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/routes/listRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/listRoute.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/mongoose.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/mongoose.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/services/authService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/services/authService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/services/itemService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/services/itemService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/services/listService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/services/listService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664808807637</updated>
-      <workItem from="1664808809236" duration="26203000" />
+      <workItem from="1664808809236" duration="37993000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,27 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -11,14 +34,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.shareUserTODO = exports.deleteTODO = exports.getTODO = exports.saveNewTODO = void 0;
 const listModel_1 = require("../models/listModel");
-const userModel_1 = require("../models/userModel");
+const UserService = __importStar(require("../services/userService"));
 function saveNewTODO(req) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            // TODO:get current user
-            const user = yield userModel_1.User.findOneAndUpdate({ username: 'test' }, { username: 'test', password: 'test' }, { upsert: true });
-            //------------------
-            yield listModel_1.List.findOneAndUpdate({ name: req.body.name }, { name: req.body.name, allowedUsers: [user.username] }, { upsert: true });
+            const username = yield UserService.getUsername(req);
+            if (req.body.name.trim().length < 3) {
+                return 'TODO List name needs to be atleast 3 characters long...';
+            }
+            yield listModel_1.List.findOneAndUpdate({ name: req.body.name }, { name: req.body.name, allowedUsers: [username] }, { upsert: true });
             return 'Success!';
         }
         catch (e) {
@@ -46,9 +70,7 @@ function deleteTODO(req) {
 exports.deleteTODO = deleteTODO;
 function shareUserTODO(req) {
     return __awaiter(this, void 0, void 0, function* () {
-        // TODO:get current user
-        const username = 'test';
-        // ----------------
+        const username = yield UserService.getUsername(req);
         return listModel_1.List.findOneAndUpdate({ name: req.body.name, allowedUsers: username }, { $push: { allowedUsers: req.body.username } }, { upsert: true });
     });
 }
