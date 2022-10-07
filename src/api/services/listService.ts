@@ -13,7 +13,6 @@ export async function saveNewTODO(req){
 			{ upsert: true });
 		return 'Success!';
 	}catch (e) {
-		console.log(`${e}`);
 		return 'An error occured, please try again!';
 	}
 
@@ -28,10 +27,16 @@ export async function deleteTODO(req){
 }
 
 export async function shareUserTODO(req) {
-	const username = await UserService.getUsername(req);
+	try {
+		const username = await UserService.getUsername(req);
+		if (!await List.findOne({name:req.body.name})){
+			return 'List does not exist!';
+		}
+		return List.findOneAndUpdate(
+			{name: req.body.name, allowedUsers: username},
+			{$push: {allowedUsers: req.body.username}});
+	}catch (e) {
+		return 'An error occured, please try again!';
+	}
 
-	return List.findOneAndUpdate(
-		{name: req.body.name, allowedUsers: username},
-		{$push: {allowedUsers: req.body.username}},
-		{upsert: true});
 }

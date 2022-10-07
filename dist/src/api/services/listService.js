@@ -46,7 +46,6 @@ function saveNewTODO(req) {
             return 'Success!';
         }
         catch (e) {
-            console.log(`${e}`);
             return 'An error occured, please try again!';
         }
     });
@@ -70,8 +69,16 @@ function deleteTODO(req) {
 exports.deleteTODO = deleteTODO;
 function shareUserTODO(req) {
     return __awaiter(this, void 0, void 0, function* () {
-        const username = yield UserService.getUsername(req);
-        return listModel_1.List.findOneAndUpdate({ name: req.body.name, allowedUsers: username }, { $push: { allowedUsers: req.body.username } }, { upsert: true });
+        try {
+            const username = yield UserService.getUsername(req);
+            if (!(yield listModel_1.List.findOne({ name: req.body.name }))) {
+                return 'List does not exist!';
+            }
+            return listModel_1.List.findOneAndUpdate({ name: req.body.name, allowedUsers: username }, { $push: { allowedUsers: req.body.username } });
+        }
+        catch (e) {
+            return 'An error occured, please try again!';
+        }
     });
 }
 exports.shareUserTODO = shareUserTODO;
